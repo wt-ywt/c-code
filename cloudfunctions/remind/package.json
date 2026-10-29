@@ -1,0 +1,9 @@
+{
+  "name": "remind",
+  "version": "1.0.0",
+  "description": "上课提醒：同步课表 + 定时发送订阅消息",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

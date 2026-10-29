@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "openapi": [
+      "subscribeMessage.send"
+    ]
+  },
+  "triggers": [
+    {
+      "name": "classReminder",
+      "type": "timer",
+      "config": "0 */5 * * * * *"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<view class="page">
+  <view class="status {{cloudReady ? 'ok' : 'warn'}}">
+    <view class="status-title">{{cloudReady ? '云开发已连接' : '未配置云开发环境'}}</view>
+    <view class="status-desc">{{cloudReady ? '可以接收微信推送提醒' : '在 config.js 填 cloudEnv 后才能推送提醒；课表本身不受影响'}}</view>
+  </view>
+
+  <view class="card">
+    <view class="row">
+      <view class="row-main">
+        <view class="row-title">上课提醒</view>
+        <view class="row-desc">课前把课程推到微信「服务通知」</view>
+      </view>
+      <switch checked="{{subscribed}}" bindchange="onToggle" color="#4a7cff" />
+    </view>
+
+    <view class="row">
+      <view class="row-main">
+        <view class="row-title">提前时间</view>
+        <view class="row-desc">距离上课还有多久时发送</view>
+      </view>
+      <picker mode="selector" range="{{advanceOptions}}" value="{{advanceIndex}}" bindchange="onAdvancePick">
+        <view class="picker">{{advanceOptions[advanceIndex]}} 分钟前</view>
+      </picker>
+    </view>
+
+    <view class="row">
+      <view class="row-main">
+        <view class="row-title">同步课表</view>
+        <view class="row-desc">{{lastSync ? '上次同步 ' + lastSync : '还没同步过'}}</view>
+      </view>
+      <view class="mini-btn" bindtap="onManualSync">立即同步</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">每节课时间</view>
+    <view class="grid">
+      <view class="grid-item" wx:for="{{slots}}" wx:key="key">
+        <view class="grid-label">第 {{item.no}} 节</view>
+        <picker mode="time" value="{{item.time}}" data-index="{{item.key}}" bindchange="onTimePick">
+          <view class="grid-val">{{item.time}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="hint">云函数按这里的时间算「还有几分钟上课」，改了记得点上面「立即同步」。</view>
+  </view>
+
+  <view class="card">
+    <view class="card-title">为什么只能收一条</view>
+    <view class="hint">微信的「一次性订阅消息」规定：用户点一次授权，小程序只能发一条。所以想连续几天都收到提醒，目前只能每天手动开一次开关。</view>
+    <view class="hint">如果你申请到了「长期订阅」类目（教育/公共服务），把云函数里的 quota 逻辑改成固定值就行，代码里留了注释。</view>
+  </view>
+</view>

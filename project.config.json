@@ -38,8 +38,9 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
+  "cloudfunctionRoot": "cloudfunctions/",
   "libVersion": "3.5.5",
-  "appid": "touristappid",
+  "appid": "wx1f6699a8c62497cc",
   "projectname": "student-schedule",
   "miniprogramRoot": "./",
   "condition": {}

@@ -8,6 +8,12 @@
       </view>
     </picker>
     <view class="nav-btn" bindtap="nextWeek">›</view>
+    <view class="bell" bindtap="goSettings">提醒</view>
+  </view>
+
+  <view class="next-tip {{nextSoon ? 'soon' : ''}}" wx:if="{{nextTip}}" bindtap="goSettings">
+    <text class="next-badge">{{nextSoon ? '即将上课' : '下一节'}}</text>
+    <text class="next-text">{{nextTip}}</text>
   </view>
 
   <view class="board">

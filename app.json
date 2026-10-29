@@ -2,7 +2,8 @@
   "pages": [
     "pages/timetable/index",
     "pages/day/index",
-    "pages/edit/index"
+    "pages/edit/index",
+    "pages/settings/index"
   ],
   "window": {
     "navigationBarTitleText": "学生日程",

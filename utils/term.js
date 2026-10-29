@@ -1,5 +1,5 @@
-// 必须是「第一周的周一」，否则表头和星期错位
-const DEFAULT_TERM_START = '2026-08-31';
+const config = require('../config.js');
+const DEFAULT_TERM_START = config.termStart;
 const DAY_NAMES = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
 
 /**
