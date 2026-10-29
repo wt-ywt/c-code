@@ -1,0 +1,91 @@
+.form {
+  padding: 24rpx 24rpx 60rpx;
+}
+
+.field {
+  margin-bottom: 20rpx;
+  padding: 24rpx;
+  background: #fff;
+  border-radius: 16rpx;
+}
+
+.label {
+  margin-bottom: 12rpx;
+  color: #8a8f99;
+  font-size: 26rpx;
+}
+
+.req {
+  color: #ff5c8a;
+}
+
+.input {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 30rpx;
+}
+
+.pickers {
+  display: flex;
+  align-items: center;
+}
+
+.picker {
+  padding: 10rpx 18rpx;
+  border-radius: 10rpx;
+  background: #f2f5ff;
+  color: #4a7cff;
+  font-size: 25rpx;
+}
+
+.pickers picker {
+  margin-right: 12rpx;
+}
+
+.sep {
+  margin-right: 12rpx;
+  color: #8a8f99;
+  font-size: 24rpx;
+}
+
+.colors {
+  display: flex;
+}
+
+.dot {
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: 22rpx;
+  border-radius: 50%;
+}
+
+.dot-on {
+  box-shadow: 0 0 0 4rpx rgba(74, 124, 255, 0.25);
+  transform: scale(1.1);
+}
+
+.preview {
+  margin: 8rpx 0 32rpx;
+  padding: 20rpx 24rpx;
+  border-left: 6rpx solid #4a7cff;
+  border-radius: 8rpx;
+  background: #eef3ff;
+  color: #4a63a8;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.save {
+  border-radius: 12rpx;
+  background: #4a7cff;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.del {
+  margin-top: 20rpx;
+  border-radius: 12rpx;
+  background: #fff;
+  color: #ff5c8a;
+  font-size: 30rpx;
+}

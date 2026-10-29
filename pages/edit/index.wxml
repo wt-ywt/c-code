@@ -1,0 +1,66 @@
+<view class="form">
+  <view class="field">
+    <view class="label">课程名称 <text class="req">*</text></view>
+    <input class="input" value="{{name}}" data-field="name" bindinput="onInput" placeholder="如：高等数学" maxlength="20" />
+  </view>
+
+  <view class="field">
+    <view class="label">任课老师</view>
+    <input class="input" value="{{teacher}}" data-field="teacher" bindinput="onInput" placeholder="选填" maxlength="20" />
+  </view>
+
+  <view class="field">
+    <view class="label">上课地点</view>
+    <input class="input" value="{{room}}" data-field="room" bindinput="onInput" placeholder="如：教3-201" maxlength="30" />
+  </view>
+
+  <view class="field">
+    <view class="label">上课时间</view>
+    <view class="pickers">
+      <picker mode="selector" range="{{dayNames}}" value="{{dayIndex}}" data-field="dayIndex" bindchange="onPick">
+        <view class="picker">{{dayNames[dayIndex]}}</view>
+      </picker>
+      <picker mode="selector" range="{{sections}}" value="{{startIndex}}" data-field="startIndex" bindchange="onPick">
+        <view class="picker">第 {{sections[startIndex]}} 节起</view>
+      </picker>
+      <picker mode="selector" range="{{spans}}" value="{{spanIndex}}" data-field="spanIndex" bindchange="onPick">
+        <view class="picker">连上 {{spans[spanIndex]}} 节</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="field">
+    <view class="label">上课周次</view>
+    <view class="pickers">
+      <picker mode="selector" range="{{weeks}}" value="{{weekStartIndex}}" data-field="weekStartIndex" bindchange="onPick">
+        <view class="picker">第 {{weeks[weekStartIndex]}} 周</view>
+      </picker>
+      <text class="sep">至</text>
+      <picker mode="selector" range="{{weeks}}" value="{{weekEndIndex}}" data-field="weekEndIndex" bindchange="onPick">
+        <view class="picker">第 {{weeks[weekEndIndex]}} 周</view>
+      </picker>
+      <picker mode="selector" range="{{parities}}" value="{{parityIndex}}" data-field="parityIndex" bindchange="onPick">
+        <view class="picker">{{parities[parityIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="field">
+    <view class="label">颜色</view>
+    <view class="colors">
+      <view
+        wx:for="{{colors}}"
+        wx:key="*this"
+        class="dot {{index === colorIndex ? 'dot-on' : ''}}"
+        style="background: {{item}};"
+        data-value="{{index}}"
+        bindtap="onColor"
+      ></view>
+    </view>
+  </view>
+
+  <view class="preview">{{preview}}</view>
+
+  <button class="save" bindtap="save">保存</button>
+  <button class="del" wx:if="{{isEdit}}" bindtap="remove">删除这门课</button>
+</view>

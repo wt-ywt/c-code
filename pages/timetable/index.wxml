@@ -1,0 +1,51 @@
+<view class="page">
+  <view class="toolbar">
+    <view class="nav-btn" bindtap="prevWeek">‹</view>
+    <picker class="week-picker" mode="selector" range="{{weeks}}" value="{{week - 1}}" bindchange="onWeekPick">
+      <view class="week-title">
+        <text>第 {{week}} 周</text>
+        <text class="week-live" wx:if="{{week === liveWeek}}">本周</text>
+      </view>
+    </picker>
+    <view class="nav-btn" bindtap="nextWeek">›</view>
+  </view>
+
+  <view class="board">
+    <view class="row head">
+      <view class="time-col head-cell">节</view>
+      <view class="day-col head-col" wx:for="{{days}}" wx:key="name">
+        <view class="day-name">{{item.name}}</view>
+        <view class="day-date">{{item.date}}</view>
+      </view>
+    </view>
+
+    <view class="row body">
+      <view class="time-col">
+        <view class="time-cell" wx:for="{{sections}}" wx:key="*this">{{item}}</view>
+      </view>
+      <view class="day-col" wx:for="{{grid}}" wx:key="key" wx:for-item="col">
+        <view class="cell" wx:for="{{sections}}" wx:key="*this"></view>
+        <view
+          class="course"
+          wx:for="{{col.list}}"
+          wx:key="id"
+          wx:for-item="c"
+          style="top: {{c.top}}px; height: {{c.height}}px; background: {{c.color}};"
+          data-id="{{c.id}}"
+          bindtap="onCourseTap"
+        >
+          <view class="course-name">{{c.name}}</view>
+          <view class="course-room" wx:if="{{c.room}}">{{c.room}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{showEmpty}}">
+    <view>这周还没有课</view>
+    <view class="empty-hint">点右下角 + 添加第一门课</view>
+  </view>
+
+  <view class="back-today" wx:if="{{week !== liveWeek}}" bindtap="backToday">回到本周</view>
+  <view class="fab" bindtap="onAdd">+</view>
+</view>

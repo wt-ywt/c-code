@@ -1,0 +1,37 @@
+<view class="page">
+  <view class="composer">
+    <input
+      class="input"
+      value="{{title}}"
+      bindinput="onTitle"
+      bindconfirm="add"
+      confirm-type="done"
+      placeholder="作业 / 考试 / 实验报告…"
+      maxlength="40"
+    />
+    <picker mode="date" value="{{date}}" bindchange="onDate">
+      <view class="date">{{date}}</view>
+    </picker>
+    <view class="add" bindtap="add">添加</view>
+  </view>
+
+  <view class="summary">未完成 {{left}} 项</view>
+
+  <view class="empty" wx:if="{{todos.length === 0}}">
+    <view>还没有日程</view>
+    <view class="empty-hint">在上面输入一件事，选个截止日期</view>
+  </view>
+
+  <view class="todo {{item.done ? 'done' : ''}}" wx:for="{{todos}}" wx:key="id">
+    <view class="check {{item.done ? 'checked' : ''}}" data-id="{{item.id}}" bindtap="toggle"></view>
+    <view class="body" data-id="{{item.id}}" bindtap="toggle">
+      <view class="title">{{item.title}}</view>
+      <view class="meta">
+        <text>{{item.date}}</text>
+        <text class="dot">·</text>
+        <text class="{{item.urgent ? 'urgent' : ''}}">{{item.diffText}}</text>
+      </view>
+    </view>
+    <view class="del" data-id="{{item.id}}" catchtap="remove">×</view>
+  </view>
+</view>

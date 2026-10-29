@@ -1,0 +1,167 @@
+.page {
+  padding-bottom: 80rpx;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18rpx 0 22rpx;
+  background: #4a7cff;
+  color: #fff;
+}
+
+.nav-btn {
+  width: 72rpx;
+  text-align: center;
+  font-size: 46rpx;
+  line-height: 46rpx;
+  opacity: 0.9;
+}
+
+.week-picker {
+  padding: 0 20rpx;
+}
+
+.week-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.week-live {
+  margin-left: 10rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 0.24);
+  font-size: 20rpx;
+  font-weight: 400;
+}
+
+.board {
+  margin: 20rpx 16rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(31, 45, 61, 0.06);
+}
+
+.row {
+  display: flex;
+}
+
+.row.head {
+  border-bottom: 1rpx solid #eef0f4;
+}
+
+.time-col {
+  width: 52px;
+  flex: none;
+  text-align: center;
+  color: #8a8f99;
+  font-size: 20rpx;
+}
+
+.head-cell {
+  height: 82rpx;
+  line-height: 82rpx;
+}
+
+.time-cell {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1rpx solid #f2f4f7;
+}
+
+.day-col {
+  flex: 1;
+  position: relative;
+}
+
+.head-col {
+  padding: 12rpx 0;
+}
+
+.day-name {
+  text-align: center;
+  font-size: 22rpx;
+  color: #2b2f36;
+}
+
+.day-date {
+  margin-top: 4rpx;
+  text-align: center;
+  font-size: 18rpx;
+  color: #a8adb8;
+}
+
+.cell {
+  height: 50px;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f2f4f7;
+}
+
+.course {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  box-sizing: border-box;
+  padding: 6rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  color: #fff;
+}
+
+.course-name {
+  font-size: 20rpx;
+  line-height: 1.25;
+  word-break: break-all;
+}
+
+.course-room {
+  margin-top: 2rpx;
+  font-size: 17rpx;
+  opacity: 0.92;
+}
+
+.empty {
+  margin-top: 120rpx;
+  text-align: center;
+  color: #a8adb8;
+  font-size: 26rpx;
+}
+
+.empty-hint {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #c1c6d0;
+}
+
+.back-today {
+  position: fixed;
+  left: 50%;
+  bottom: 56rpx;
+  transform: translateX(-50%);
+  padding: 12rpx 28rpx;
+  border-radius: 32rpx;
+  background: rgba(43, 47, 54, 0.78);
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.fab {
+  position: fixed;
+  right: 32rpx;
+  bottom: 120rpx;
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: #4a7cff;
+  color: #fff;
+  font-size: 54rpx;
+  line-height: 92rpx;
+  text-align: center;
+  box-shadow: 0 8rpx 24rpx rgba(74, 124, 255, 0.4);
+}

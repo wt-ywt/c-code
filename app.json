@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/timetable/index",
+    "pages/day/index",
+    "pages/edit/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "学生日程",
+    "navigationBarBackgroundColor": "#4a7cff",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6fa"
+  },
+  "tabBar": {
+    "color": "#8a8f99",
+    "selectedColor": "#4a7cff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/timetable/index",
+        "text": "课表"
+      },
+      {
+        "pagePath": "pages/day/index",
+        "text": "日程"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

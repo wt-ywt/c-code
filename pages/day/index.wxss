@@ -1,0 +1,109 @@
+.page {
+  padding: 24rpx 24rpx 60rpx;
+}
+
+.composer {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 20rpx;
+  border-radius: 16rpx;
+  background: #fff;
+  box-shadow: 0 4rpx 16rpx rgba(31, 45, 61, 0.06);
+}
+
+.input {
+  flex: 1;
+  font-size: 28rpx;
+}
+
+.date {
+  padding: 8rpx 16rpx;
+  border-radius: 10rpx;
+  background: #f2f5ff;
+  color: #4a7cff;
+  font-size: 22rpx;
+}
+
+.add {
+  margin-left: 14rpx;
+  padding: 12rpx 22rpx;
+  border-radius: 10rpx;
+  background: #4a7cff;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.summary {
+  margin: 28rpx 8rpx 14rpx;
+  color: #8a8f99;
+  font-size: 24rpx;
+}
+
+.empty {
+  margin-top: 100rpx;
+  text-align: center;
+  color: #a8adb8;
+  font-size: 26rpx;
+}
+
+.empty-hint {
+  margin-top: 10rpx;
+  color: #c1c6d0;
+  font-size: 22rpx;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+  padding: 22rpx;
+  border-radius: 16rpx;
+  background: #fff;
+}
+
+.check {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 20rpx;
+  flex: none;
+  border: 2rpx solid #c9ced8;
+  border-radius: 50%;
+}
+
+.check.checked {
+  border-color: #36b37e;
+  background: #36b37e;
+}
+
+.body {
+  flex: 1;
+}
+
+.title {
+  font-size: 28rpx;
+}
+
+.todo.done .title {
+  color: #a8adb8;
+  text-decoration: line-through;
+}
+
+.meta {
+  margin-top: 6rpx;
+  color: #8a8f99;
+  font-size: 22rpx;
+}
+
+.dot {
+  padding: 0 8rpx;
+}
+
+.urgent {
+  color: #ff5c8a;
+}
+
+.del {
+  padding: 0 8rpx;
+  color: #c9ced8;
+  font-size: 36rpx;
+}
